@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{trainer}-{###}",
+ "creation": "2023-10-30 13:54:12.016224",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member",
+  "trainer",
+  "subscription_start_date",
+  "subscription_end_date",
+  "column_break_rhxwu",
+  "subscription_plan",
+  "subscription_cost",
+  "ratings",
+  "status",
+  "section_break_ojeuk",
+  "feedback"
+ ],
+ "fields": [
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trainer",
+   "options": "Gym Trainer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subscription_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Subscription Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subscription_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Subscription End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subscription_plan",
+   "fieldtype": "Link",
+   "label": "Subscription Plan",
+   "options": "Gym Subscription plan",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "subscription_plan.plan_cost",
+   "fetch_if_empty": 1,
+   "fieldname": "subscription_cost",
+   "fieldtype": "Currency",
+   "label": "Subscription Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nExpired\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rhxwu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ojeuk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ratings",
+   "fieldtype": "Rating",
+   "label": "Rate the Trainer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-08 10:19:01.469353",
+ "modified_by": "Administrator",
+ "module": "Gym App",
+ "name": "Gym Trainer Subscription",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{membership_type}",
+ "creation": "2023-10-30 11:50:31.320124",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "membership_type",
+  "price",
+  "column_break_hcihp",
+  "duration",
+  "locker_included",
+  "trainer_included",
+  "classes_included",
+  "section_break_x87ss",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "membership_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Membership type",
+   "options": "Platinum\nGold\nSilver",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Duration",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "locker_included",
+   "fieldtype": "Check",
+   "label": "Locker Included",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "trainer_included",
+   "fieldtype": "Check",
+   "label": "Trainer Included",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "classes_included",
+   "fieldtype": "Check",
+   "label": "Classes Included"
+  },
+  {
+   "fieldname": "column_break_hcihp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_x87ss",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-01 14:07:40.044238",
+ "modified_by": "Administrator",
+ "module": "Gym App",
+ "name": "Gym Membership Type",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

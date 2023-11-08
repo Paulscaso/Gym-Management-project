@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{exercise_name}-{##}",
+ "creation": "2023-10-31 16:04:37.373155",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "exercise_name",
+  "sets",
+  "repetitions",
+  "column_break_r3thv",
+  "rest_between_sets",
+  "rest_between_exercises",
+  "exercise_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "exercise_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Exercise Name"
+  },
+  {
+   "fieldname": "sets",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sets"
+  },
+  {
+   "fieldname": "repetitions",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Repetitions"
+  },
+  {
+   "fieldname": "rest_between_sets",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Rest Between Sets"
+  },
+  {
+   "fieldname": "rest_between_exercises",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Rest Between Exercises"
+  },
+  {
+   "fieldname": "exercise_notes",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Exercise Notes"
+  },
+  {
+   "fieldname": "column_break_r3thv",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-31 16:12:54.214337",
+ "modified_by": "Administrator",
+ "module": "Gym App",
+ "name": "Gym Workout Plan Exercise",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

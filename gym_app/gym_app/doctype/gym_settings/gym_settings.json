@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-31 16:44:51.099254",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_name",
+  "contact_information",
+  "logo_image",
+  "gym_address",
+  "column_break_pl10u",
+  "operating_hours"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Gym Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gym_address",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Gym Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_information",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contact Information",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pl10u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operating_hours",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Operating Hours",
+   "reqd": 1
+  },
+  {
+   "fieldname": "logo_image",
+   "fieldtype": "Attach Image",
+   "label": "Logo Image",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-10-31 16:47:00.264325",
+ "modified_by": "Administrator",
+ "module": "Gym App",
+ "name": "Gym Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

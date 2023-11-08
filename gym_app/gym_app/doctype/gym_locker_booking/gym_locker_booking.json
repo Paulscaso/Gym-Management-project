@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{member_name}",
+ "creation": "2023-10-31 13:00:00.418705",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "locker_number",
+  "member_name",
+  "booking_date",
+  "column_break_hocbr",
+  "booking_status",
+  "booking_type",
+  "amount_paid"
+ ],
+ "fields": [
+  {
+   "fieldname": "locker_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Locker Number",
+   "options": "Locker Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Booking Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Booking Status",
+   "options": "Booked\nPending",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_type",
+   "fieldtype": "Select",
+   "label": "Booking Type",
+   "options": "Monthly\nOne-time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "label": "Booking cost",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hocbr",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-06 08:26:20.963548",
+ "modified_by": "Administrator",
+ "module": "Gym App",
+ "name": "Gym Locker Booking",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

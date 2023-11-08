@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "format:level-{plan_level}-{plan_type}-{##}",
+ "creation": "2023-10-31 15:33:54.336011",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "plan_level",
+  "plan_type",
+  "plan_name",
+  "plan_duration",
+  "column_break_zqnje",
+  "plan_cost",
+  "plan_image",
+  "route",
+  "is_published",
+  "section_break_l6jp6",
+  "plan_description",
+  "exercise_plan"
+ ],
+ "fields": [
+  {
+   "default": "\n",
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Plan Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Plan Level",
+   "options": "Beginner\nIntermediate\nAdvanced",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Plan Type",
+   "options": "Full Body\nStrength\nCardio\nStamina",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_duration",
+   "fieldtype": "Data",
+   "label": "Plan Duration"
+  },
+  {
+   "fieldname": "plan_cost",
+   "fieldtype": "Currency",
+   "label": "Plan Cost",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zqnje",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_l6jp6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "exercise_plan",
+   "fieldtype": "Table",
+   "label": "Exercise plan",
+   "options": "Gym Workout Plan Exercise"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is published"
+  },
+  {
+   "fieldname": "plan_image",
+   "fieldtype": "Attach Image",
+   "label": "Plan Image"
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
+ "links": [],
+ "modified": "2023-11-06 11:16:44.210352",
+ "modified_by": "Administrator",
+ "module": "Gym App",
+ "name": "Gym Workout Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "workout",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

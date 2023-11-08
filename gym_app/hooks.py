@@ -118,13 +118,12 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Gym Member": {
+		"on_update": "gym_app.gym_app.service.rest.on_update_events",
+        "update": "gym_app.gym_app.service.rest.update_events"
+	}
+}
 
 # Scheduled Tasks
 # ---------------

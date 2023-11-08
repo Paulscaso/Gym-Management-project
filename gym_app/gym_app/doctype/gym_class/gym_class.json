@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{class_name}",
+ "creation": "2023-10-31 14:31:26.308704",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "class_name",
+  "class_type",
+  "column_break_6btyq",
+  "instructor_name",
+  "class_schedule",
+  "section_break_8zafm",
+  "class_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class Name",
+   "reqd": 1
+  },
+  {
+   "default": "Yoga",
+   "fieldname": "class_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Class Type",
+   "options": "Yoga\nCircuit Training\nWater Aerobics\nBootcamp\nKickboxing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Class Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "instructor_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Instructor Name",
+   "options": "Gym Trainer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_schedule",
+   "fieldtype": "Time",
+   "label": "Class Schedule"
+  },
+  {
+   "fieldname": "column_break_6btyq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8zafm",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-05 22:35:27.211230",
+ "modified_by": "Administrator",
+ "module": "Gym App",
+ "name": "Gym Class",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

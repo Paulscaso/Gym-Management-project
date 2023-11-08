@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: {full_name}",
+ "creation": "2023-10-30 13:40:01.834019",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "phone_number",
+  "email",
+  "specialization",
+  "column_break_rubl3",
+  "experience",
+  "ratings",
+  "active",
+  "session_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "specialization",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Specialization",
+   "options": "Fitness trainer\nSports coach\nPersonal trainer\nLifestyle coach\nBodybuilding coach",
+   "reqd": 1
+  },
+  {
+   "fieldname": "experience",
+   "fieldtype": "Data",
+   "label": "Experience",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ratings",
+   "fieldtype": "Rating",
+   "label": "Ratings",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "session_cost",
+   "fieldtype": "Currency",
+   "label": "Session Cost",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rubl3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-02 15:29:37.208731",
+ "modified_by": "Administrator",
+ "module": "Gym App",
+ "name": "Gym Trainer",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
