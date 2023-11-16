@@ -3,6 +3,32 @@
 
 frappe.ui.form.on('Gym Trainer Subscription', {
     refresh: function(frm) {
+        
+        console.log(frm.doc.ratings)
+
+        frm.add_custom_button(__('proceed to book a class'), function(){
+
+            frappe.new_doc('Gym Class Booking');		
+		});
+
+        frm.fields_dict["subscription_start_date"].df.onchange = function (){
+			set_end_booking_date(frm)
+		};
+        frappe.call({
+            method: 'frappe.client.get',
+            args: {
+                doctype: 'User',
+                name: frappe.session.user
+            },
+            callback: function(r) {
+                if (r.message && r.message.full_name) {
+                    // Set the member name field to the full name of the user
+                    frm.set_value('member', r.message.full_name);
+                }
+            }
+        });
+
+
         // frm.fields_dict['subscription_plan'].get_query = function(doc) {
         //     return {
         //         filters: [
@@ -26,8 +52,29 @@ frappe.ui.form.on('Gym Trainer Subscription', {
 
         // Show the read-only field
         // frm.fields_dict['subscription_cost'].hidden = 1;
-    }
+    },
+
+    after_save: function(frm) {
+		frappe.call({
+			method: "gym_app.gym_app.service.rest.calculate_average_ratings",
+			args: {
+				name: frm.doc.trainer_name,
+			},
+			callback: function(response) {
+				console.log(response.message);
+			}
+		});
+		
+	}
 });
+
+function set_end_booking_date(frm) {
+    var start_date = frm.doc.subscription_start_date;
+    if (start_date) {
+        var end_date = frappe.datetime.add_days(start_date, 30);
+        frm.set_value('subscription_end_date', end_date);
+    }
+}
 
 
 

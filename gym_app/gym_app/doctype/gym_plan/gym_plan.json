@@ -1,52 +1,44 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{class_type}-{#}",
- "creation": "2023-10-31 14:31:26.308704",
+ "autoname": "format:{plan_name}-{plan_duration}-{##}",
+ "creation": "2023-11-15 12:06:51.999947",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "class_type",
-  "class_schedule",
-  "class_cost",
-  "is_class_attended"
+  "plan_name",
+  "plan_duration",
+  "plan_cost"
  ],
  "fields": [
   {
-   "default": "Yoga",
-   "fieldname": "class_type",
+   "fieldname": "plan_name",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Class Type",
-   "options": "Yoga\nCircuit Training\nWater Aerobics\nBootcamp\nKickboxing",
+   "label": "Plan Name",
+   "options": "Basic Plan\nPro plan",
    "reqd": 1
   },
   {
-   "fieldname": "class_schedule",
+   "fieldname": "plan_duration",
    "fieldtype": "Select",
-   "label": "Class Schedule",
-   "options": "8:00 am\n10:00 am\n12:00 noon\n2:00 pm\n4:00 pm"
+   "label": "Plan Duration",
+   "options": "1 day\n1 week\n2 weeks\n1 month"
   },
   {
-   "fieldname": "class_cost",
+   "fieldname": "plan_cost",
    "fieldtype": "Currency",
-   "label": "Class cost"
-  },
-  {
-   "default": "0",
-   "fieldname": "is_class_attended",
-   "fieldtype": "Check",
-   "label": "Is Class Attended"
+   "label": "Plan cost"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-15 12:47:13.329096",
+ "modified": "2023-11-15 12:09:30.477477",
  "modified_by": "Administrator",
  "module": "Gym App",
- "name": "Gym Class",
+ "name": "Gym Plan",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

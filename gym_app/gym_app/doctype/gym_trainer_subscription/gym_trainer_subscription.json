@@ -11,12 +11,10 @@
   "member",
   "trainer",
   "subscription_start_date",
-  "subscription_end_date",
   "column_break_rhxwu",
-  "subscription_plan",
+  "subscription_end_date",
   "subscription_cost",
   "ratings",
-  "status",
   "section_break_ojeuk",
   "feedback"
  ],
@@ -52,14 +50,7 @@
    "reqd": 1
   },
   {
-   "fieldname": "subscription_plan",
-   "fieldtype": "Link",
-   "label": "Subscription Plan",
-   "options": "Gym Subscription plan",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "subscription_plan.plan_cost",
+   "fetch_from": "trainer.monthly_charges",
    "fetch_if_empty": 1,
    "fieldname": "subscription_cost",
    "fieldtype": "Currency",
@@ -70,13 +61,6 @@
    "fieldname": "feedback",
    "fieldtype": "Small Text",
    "label": "Comment"
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Active\nExpired\nCancelled",
-   "reqd": 1
   },
   {
    "fieldname": "column_break_rhxwu",
@@ -94,7 +78,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-08 10:19:01.469353",
+ "modified": "2023-11-14 09:57:28.428195",
  "modified_by": "Administrator",
  "module": "Gym App",
  "name": "Gym Trainer Subscription",

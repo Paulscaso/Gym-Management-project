@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{member_name}-{membership_type}-{##}",
+ "creation": "2023-11-15 12:18:52.166781",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member_name",
+  "subscription_date",
+  "subscription_end_date",
+  "membership_type",
+  "membership_duration",
+  "membership_cost",
+  "trainer",
+  "trainer_cost",
+  "column_break_hcihp",
+  "trainer_ratings",
+  "class_booking",
+  "class_booking_cost",
+  "locker_booking",
+  "locker_booking_cost",
+  "total_subscription_costs",
+  "section_break_wds6m",
+  "class_attendance",
+  "subscription_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Link",
+   "label": "Member Name",
+   "options": "Member Registration",
+   "reqd": 1
+  },
+  {
+   "fieldname": "membership_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Membership type",
+   "options": "Gym Plan"
+  },
+  {
+   "fetch_from": "membership_type.plan_duration",
+   "fieldname": "membership_duration",
+   "fieldtype": "Data",
+   "label": "Membership Duration"
+  },
+  {
+   "fieldname": "column_break_hcihp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "membership_type.plan_cost",
+   "fieldname": "membership_cost",
+   "fieldtype": "Currency",
+   "label": "Membership Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Gym Trainer"
+  },
+  {
+   "fetch_from": "trainer.monthly_charges",
+   "fieldname": "trainer_cost",
+   "fieldtype": "Currency",
+   "label": "Trainer Cost",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: \"doc.membership_type.toLowerCase().startsWith('pro')\"",
+   "fieldname": "class_booking",
+   "fieldtype": "Link",
+   "label": "Class Booking",
+   "options": "Gym Class"
+  },
+  {
+   "fetch_from": "class_booking.class_cost",
+   "fieldname": "class_booking_cost",
+   "fieldtype": "Currency",
+   "label": "Class Booking cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_wds6m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "locker_booking",
+   "fieldtype": "Link",
+   "label": "Locker Booking",
+   "options": "Locker Master"
+  },
+  {
+   "fieldname": "locker_booking_cost",
+   "fieldtype": "Currency",
+   "label": "Locker Booking Cost"
+  },
+  {
+   "fieldname": "total_subscription_costs",
+   "fieldtype": "Currency",
+   "label": "Total Subscription costs",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "class_attendance",
+   "fieldtype": "Table",
+   "label": "Class Attendance",
+   "options": "Member Class Attendance"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Member Subscription",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "subscription_date",
+   "fieldtype": "Date",
+   "label": "Subscription Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trainer_ratings",
+   "fieldtype": "Rating",
+   "label": "Trainer Ratings"
+  },
+  {
+   "fieldname": "subscription_end_date",
+   "fieldtype": "Date",
+   "label": "Subscription End Date"
+  },
+  {
+   "default": "Active",
+   "fieldname": "subscription_status",
+   "fieldtype": "Select",
+   "label": "Subscription Status",
+   "options": "Active\nExpired"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-11-16 12:58:14.178388",
+ "modified_by": "Administrator",
+ "module": "Gym App",
+ "name": "Member Subscription",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

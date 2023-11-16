@@ -3,7 +3,7 @@
  "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "format:{full_name}",
- "creation": "2023-10-30 12:02:20.150372",
+ "creation": "2023-11-14 13:41:03.821215",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -14,24 +14,36 @@
   "full_name",
   "membership_type",
   "subscription_start_date",
-  "member_booking_cost",
   "subscription_end_date",
   "column_break_crgbg",
+  "member_booking_cost",
   "phone_number",
-  "trainer_assignedt",
   "email",
   "date_of_birth",
   "gender",
   "medical_condition",
   "section_break_wxdmk",
-  "fitness_metrics"
+  "fitness_metrics",
+  "amended_from",
+  "amended_from"
  ],
  "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Full name",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -55,6 +67,16 @@
    "in_list_view": 1,
    "label": "Subscription End Date",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_crgbg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "membership_type.price",
+   "fieldname": "member_booking_cost",
+   "fieldtype": "Currency",
+   "label": "Member booking cost"
   },
   {
    "fieldname": "phone_number",
@@ -86,14 +108,8 @@
    "label": "Medical Condition"
   },
   {
-   "fieldname": "trainer_assignedt",
-   "fieldtype": "Link",
-   "label": "Trainer AssignedTo",
-   "options": "Gym Trainer"
-  },
-  {
-   "fieldname": "column_break_crgbg",
-   "fieldtype": "Column Break"
+   "fieldname": "section_break_wxdmk",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "fitness_metrics",
@@ -102,31 +118,30 @@
    "options": "Customer Fitness Metrics"
   },
   {
-   "fieldname": "section_break_wxdmk",
-   "fieldtype": "Section Break"
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Member",
+   "print_hide": 1,
+   "read_only": 1
   },
   {
-   "fieldname": "first_name",
-   "fieldtype": "Data",
-   "label": "First Name"
-  },
-  {
-   "fieldname": "last_name",
-   "fieldtype": "Data",
-   "label": "Last Name"
-  },
-  {
-   "fetch_from": "membership_type.price",
-   "fieldname": "member_booking_cost",
-   "fieldtype": "Currency",
-   "label": "Member booking cost"
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "members",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-11-08 11:51:58.554245",
+ "modified": "2023-11-14 13:41:03.821215",
  "modified_by": "Administrator",
  "module": "Gym App",
- "name": "Gym Member",
+ "name": "members",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
@@ -141,6 +156,27 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1
   }
  ],
  "sort_field": "modified",

@@ -36,7 +36,7 @@
    "in_list_view": 1,
    "label": "Locker Status",
    "options": "Available\nTaken",
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "column_break_9zihn",
@@ -49,7 +49,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-05 17:52:44.428341",
+ "modified": "2023-11-13 22:57:20.687181",
  "modified_by": "Administrator",
  "module": "Gym App",
  "name": "Locker Master",

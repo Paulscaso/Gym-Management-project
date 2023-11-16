@@ -1,11 +1,8 @@
 // Copyright (c) 2023, Paul Kimotho and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Gym Trainer', {
-	refresh: function(frm) {
-		
-	},
-	
+frappe.ui.form.on('Gym Plan', {
+	// refresh: function(frm) {
+
+	// }
 });
-
-

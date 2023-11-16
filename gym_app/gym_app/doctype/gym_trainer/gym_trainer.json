@@ -16,7 +16,7 @@
   "experience",
   "ratings",
   "active",
-  "session_cost"
+  "monthly_charges"
  ],
  "fields": [
   {
@@ -42,16 +42,17 @@
   },
   {
    "fieldname": "specialization",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Specialization",
-   "options": "Fitness trainer\nSports coach\nPersonal trainer\nLifestyle coach\nBodybuilding coach",
+   "label": "Class of specializion",
+   "options": "Gym Class",
    "reqd": 1
   },
   {
    "fieldname": "experience",
-   "fieldtype": "Data",
-   "label": "Experience",
+   "fieldtype": "Select",
+   "label": "Experience(years)",
+   "options": "1\n2\n3\n4\n5+",
    "reqd": 1
   },
   {
@@ -67,19 +68,18 @@
    "label": "Active"
   },
   {
-   "fieldname": "session_cost",
-   "fieldtype": "Currency",
-   "label": "Session Cost",
-   "reqd": 1
-  },
-  {
    "fieldname": "column_break_rubl3",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monthly_charges",
+   "fieldtype": "Currency",
+   "label": "monthly charges"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-02 15:29:37.208731",
+ "modified": "2023-11-14 08:46:00.133557",
  "modified_by": "Administrator",
  "module": "Gym App",
  "name": "Gym Trainer",

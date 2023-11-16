@@ -1,16 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-11-05 23:17:05.776860",
- "default_view": "List",
+ "creation": "2023-11-15 15:20:24.449391",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "date",
-  "weight",
-  "calories_intake",
-  "body_measurements"
+  "class_type",
+  "is_attended"
  ],
  "fields": [
   {
@@ -21,32 +19,29 @@
    "reqd": 1
   },
   {
-   "fieldname": "weight",
-   "fieldtype": "Float",
+   "fieldname": "class_type",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Weight",
+   "label": "Class Type",
+   "options": "Gym Class",
    "reqd": 1
   },
   {
-   "fieldname": "calories_intake",
-   "fieldtype": "Float",
+   "default": "0",
+   "fieldname": "is_attended",
+   "fieldtype": "Check",
    "in_list_view": 1,
-   "label": "Calories Intake",
+   "label": "Is Attended",
    "reqd": 1
-  },
-  {
-   "fieldname": "body_measurements",
-   "fieldtype": "Text",
-   "label": "Body Measurements"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-15 16:55:50.308144",
+ "modified": "2023-11-15 15:20:24.449391",
  "modified_by": "Administrator",
  "module": "Gym App",
- "name": "Customer Fitness Metrics",
+ "name": "Member Class Attendance",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

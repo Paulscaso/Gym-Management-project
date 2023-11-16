@@ -10,11 +10,7 @@ class GymLockerBooking(Document):
         locker_number = doc.locker_number
         frappe.db.set_value('Locker Master', locker_number, 'locker_status', 'Taken')
     pass
-	# def on_submit(doc, method):
-	# 	locker_number = doc.locker_number
-
-	# 	frappe.db.set_value('Locker Master', locker_number, 'locker_status', 'Taken')
-
+	
 
 
 
